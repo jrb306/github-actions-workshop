@@ -2,7 +2,7 @@
 
 public interface IFileService
 {
-    string GetFileContents(string fileName);
+    string GetFileContents(string fileName); doesnt work
 }
 
 public class FileService : IFileService
