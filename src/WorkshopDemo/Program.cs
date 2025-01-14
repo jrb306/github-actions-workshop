@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
-builder.Services.AddHealthChecks()Hellyeahbrother
+builder.Services.AddHealthChecks()
     .AddCheck<WorkshopDemoHealthCheck>(nameof(WorkshopDemoHealthCheck));
 builder.Services.AddSingleton<IFileService, FileService>();
 builder.Services.AddSingleton<IVersionService, VersionService>();
