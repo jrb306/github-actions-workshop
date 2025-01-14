@@ -6,20 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-test:
     name: Build on main
-    runs-on: ubuntu-22.04
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 9.0.x
-
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
-
-      - name: Test
-        run: dotnet test --configuration Release --no-build
+    uses: ./.github/workflows/build-and-test.yml
+    with:
+      dotnet_version: 9.0.x
