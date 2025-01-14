@@ -8,6 +8,6 @@ on:
 jobs:
   build-and-test:
     name: Build on main
-    uses: ./.github/workflows/build-and-test.yml
+    uses: jrb306/reusable-workflows/.github/workflows/build-and-test.yml@main
     with:
       dotnet_version: 9.0.x
